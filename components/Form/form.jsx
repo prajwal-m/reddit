@@ -1,7 +1,7 @@
 import React from "react";
 import "./form.css";
 import db from "../../utils/DexieDb";
-
+import Button from "../button/Button";
 const uuidv4 = require("uuid/v4");
 
 class Form extends React.Component {
@@ -88,12 +88,8 @@ class Form extends React.Component {
             value={this.state.imgURL}
             onChange={this.handleChange}
           />
-          <button className="submit-btn" onClick={() => this.addTask()}>
-            Submit
-          </button>
-          <button className="cancel-btn" onClick={() => formToggle()}>
-            Cancel
-          </button>
+          <Button buttonText="Submit" onClick={this.addTask}/>
+           <Button buttonText="cancel" onClick={formToggle}/>
         </div>
       );
     }
